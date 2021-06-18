@@ -36,6 +36,7 @@ main {
 header{
     height:700px;
 }
+
 #img_landP {
     width: 604px;
     height: 445px;
@@ -95,7 +96,7 @@ header{
 #TITEL {
     width: auto;
     height: auto;
-    font-family: 'Impact';
+    font-family: 'Arial black';
     color: white;
     font-size: 5rem;
     font-weight: 600;
@@ -520,6 +521,12 @@ h2 {
 
 #contact-right form textarea.form-control {
     min-height: 164px;
+}
+
+.btn{
+    color: #fff;
+    background-color: #4D8CC4 ;
+    border-color: #fff;
 }
 /* =========================================
                 FOOTER
