@@ -33,20 +33,21 @@ main {
 /* =========================================
                 Landing page
 ============================================ */
-header{
-    height:700px;
+header {
+    height: 700px;
 }
 
 #img_landP {
     width: 604px;
     height: 445px;
     position: absolute;
-    top:30%;
+    top: 30%;
     left: 50%;
     opacity: 0;
     animation: anim0 1s forwards 2s;
     overflow: hidden;
 }
+
 @keyframes anim0 {
     from {
         left: 100%;
@@ -58,6 +59,7 @@ header{
         opacity: 1;
     }
 }
+
 #img_landP:after {
     content: '';
     position: absolute;
@@ -67,7 +69,7 @@ header{
     left: 0px;
     z-index: -1;
     background-repeat: no-repeat;
-    
+
 }
 
 /*keyframes*/
@@ -93,6 +95,8 @@ header{
     }
 }
 
+/*titel*/
+
 #TITEL {
     width: auto;
     height: auto;
@@ -106,7 +110,7 @@ header{
     overflow: hidden;
 }
 
-#text {
+#text_titel {
     position: relative;
     left: -100%;
     animation: anim3 1s forwards 2s;
@@ -131,26 +135,27 @@ header{
     top: -100%;
     animation: anim4 2s forwards 1s;
     background-color: white;
-    z-index:99;
-    display:flex;
+    z-index: 99;
+    display: flex;
     justify-content: space-around;
     align-items: center;
-    height:70px;
+    height: 70px;
     transition: .5s ease;
 }
 
-#box3 {
-    display:flex;
+#nav {
+    display: flex;
     justify-content: center;
     align-items: center;
     /* overflow: hidden; */
-    
+
 }
 
+/*logo*/
 
 #logo {
-    width:25%;
-    display:flex;
+    width: 25%;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -159,12 +164,13 @@ header{
     width: 50%;
 }
 
+/*menu*/
 
 #menu {
     display: flex;
     justify-content: center;
     margin-right: 5%;
-     transition: .5s ease
+    transition: .5s ease
 }
 
 #menu ul {
@@ -175,7 +181,7 @@ header{
     display: inline-block;
     padding-left: 50px;
     padding-top: 10px;
-    position:relative;
+    position: relative;
     overflow: hidden;
 }
 
@@ -185,23 +191,24 @@ header{
     color: #2C2B2B;
     letter-spacing: 2px;
     text-decoration: none;
-    padding: 8px; 
+    padding: 8px;
     font-weight: 600;
-    transition:.3s ease all;
-    z-index:90;
-   
+    transition: .3s ease all;
+    z-index: 90;
+
 }
-  
+
 .menu_knop:hover {
     color: #529cdd;
     padding: 8px;
-    letter-spacing: 2px; 
+    letter-spacing: 2px;
     font-weight: 600;
     text-decoration: none;
-   
+
 }
-.menu_knop:hover:before{
-    width:100%;
+
+.menu_knop:hover:before {
+    width: 100%;
 }
 
 @keyframes anim4 {
@@ -215,29 +222,32 @@ header{
 }
 
 /*hamburger-menu*/
-.cross{
+.kruis {
     position: absolute;
     top: 10px;
     right: 10px;
-    cursor:pointer;
-    display:none;
-    transition:.4s ease-in;
-    padding:0px 5px;
+    cursor: pointer;
+    display: none;
+    transition: .4s ease-in;
+    padding: 0px 5px;
     width: 50px;
     height: 50px;
-   
+
 }
-.cross>h2{
+
+.kruis>h2 {
     overflow: hidden;
     transform: rotate(45deg);
 }
-.cross:hover.cross>h2{
-    color:rgb(243, 18, 18);
+
+.kruis:hover.kruis>h2 {
+    color: rgb(243, 18, 18);
 }
-.hamburger-menu{
-    position:absolute;
-    top:0px;
-    right:10%;
+
+.hamburger-menu {
+    position: absolute;
+    top: 0px;
+    right: 10%;
     cursor: pointer;
     display: none;
 }
@@ -399,8 +409,9 @@ h2 {
     width: 55%;
     height: 50%;
 }
+
 .mySlides {
-    overflow:hidden;
+    overflow: hidden;
 }
 
 .slide-prev,
@@ -437,23 +448,13 @@ h2 {
 
 
 
-/************CSS Animation***********/
+/************CSS Animation foto slider***********/
 
 .animated {
     -webkit-animation-name: fadeIn;
     animation-name: fadeIn;
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
-}
-
-@-webkit-keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
 }
 
 @keyframes fadeIn {
@@ -523,15 +524,16 @@ h2 {
     min-height: 164px;
 }
 
-.btn{
+.btn {
     color: #fff;
-    background-color: #4D8CC4 ;
+    background-color: #4D8CC4;
     border-color: #fff;
 }
+
 /* =========================================
                 FOOTER
 ============================================ */
-#socials{
+#socials {
     text-align: center;
     color: white;
     font-size: 15px;
@@ -577,125 +579,143 @@ footer p span {
 @media (max-width: 992px) {
     .about_foto {
         width: 50%;
-        
+
     }
-    
-    #typoanimatie{
-        height:535px;
+
+    #typoanimatie {
+        height: 535px;
     }
-    #video{
-        height:500px
+
+    #video {
+        height: 500px
     }
-    #img_landP{
-        left:55%;
-        top:30%;
+
+    #img_landP {
+        left: 55%;
+        top: 30%;
     }
-    #img_landP:after{
-        height:300px;
-        width:300px;
+
+    #img_landP:after {
+        height: 300px;
+        width: 300px;
         background-size: cover;
     }
 
 }
 
-@media (max-width: 855px){
-    #img_landP{
-        left:50%
+@media (max-width: 855px) {
+    #img_landP {
+        left: 50%
     }
-    #text{
-        font-size:2.9rem
+
+    #text_titel {
+        font-size: 2.9rem
     }
 }
 
-@media (max-width: 760px){
-    #text{
-        font-size:2.8rem
+@media (max-width: 760px) {
+    #text_titel {
+        font-size: 2.8rem
     }
-    #img_landP{
-        left:45%
+
+    #img_landP {
+        left: 45%
     }
-    #menu{
-        display:block;
-        width:200px;
-        height:200px;
-        position:absolute;
-        right:-100%;
-        top:0%;
-        background:#fff;
+
+    #menu {
+        display: block;
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        right: -100%;
+        top: 0%;
+        background: #fff;
         transition: 1s ease all;
         z-index: 10;
     }
-    #menu ul li a{
-        color:#000;
+
+    #menu ul li a {
+        color: #000;
     }
+
     #menu ul {
-        height:100%;
-        width:100%;
+        height: 100%;
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
     }
+
     #menu ul li {
         display: block;
-        padding:5px;
-        position:relative;
+        padding: 5px;
+        position: relative;
         margin-left: 0px;
     }
-    #menu ul li a{
-        position:relative;
-    }
-    #nav_animation{
-        display:block;
-        position:fixed;
-    }
-    #logo{
-        height:100%;
+
+    #menu ul li a {
+        position: relative;
     }
 
-    
-    .cross{
-        display:block;
+    #nav_animation {
+        display: block;
+        position: fixed;
     }
-    .hamburger-menu{
+
+    #logo {
+        height: 100%;
+    }
+
+
+    .kruis {
+        display: block;
+    }
+
+    .hamburger-menu {
         display: block;
     }
 
 }
 
-@media (max-width:640px){
-    #text{
-        font-size:2.5rem
+@media (max-width:640px) {
+    #text_titel {
+        font-size: 2.5rem
     }
-    #img_landP{
-        left:45%;
-        top:35%;
+
+    #img_landP {
+        left: 45%;
+        top: 35%;
     }
 }
 
 
-@media (max-width:576px){
-    #TITEL{
-        left:5%;
+@media (max-width:576px) {
+    #TITEL {
+        left: 5%;
     }
+
     #img_landP::after {
         height: 210px;
         width: 219px;
         margin-left: 21px;
     }
 }
-@media (max-width:455px){
+
+@media (max-width:455px) {
     #img_landP::after {
         height: 183px;
         width: 180px;
         margin-left: 26px;
     }
 }
-@media (max-width:386px){
-    #text{
-        font-size:2rem
+
+@media (max-width:386px) {
+    #text_titel {
+        font-size: 2rem
     }
-    #img_landP{
-        left:40%
+
+    #img_landP {
+        left: 40%
     }
 }

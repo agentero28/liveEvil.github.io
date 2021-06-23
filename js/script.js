@@ -1,4 +1,36 @@
 /* =========================================
+                navigation (sticky)
+============================================ */
+
+window.addEventListener('scroll',()=>{
+	const text = document.querySelectorAll('.menu_knop')
+	if(pageYOffset > 95 ){
+		document.querySelector('#nav_animation').style.backgroundColor="#000"
+		text.forEach(ele=>{
+			ele.style.color="#fff"
+		})
+		document.querySelector("#menu").style.backgroundColor="#000"
+	}else{
+		document.querySelector('#nav_animation').style.backgroundColor="#fff"
+		text.forEach(ele=>{
+			ele.style.color="#000"
+		})
+		document.querySelector("#menu").style.backgroundColor="#fff"
+	}
+})
+
+const btn = document.querySelector('.hamburger-menu');
+btn.addEventListener('click',()=>{
+	document.querySelector('#menu').style.right="0%"
+
+})
+
+const kruis = document.querySelector('.kruis')
+kruis.addEventListener('click',()=>{
+	document.querySelector('#menu').style.right="-100%"
+})
+
+/* =========================================
                 preloader
 ============================================ */
 $(window).on('load', function() {
@@ -57,34 +89,3 @@ function currentSlide(n) {
 	showSlides();
 }
 window.onload = showSlides;
-
-
-/* javascript for sticky header */
-
-window.addEventListener('scroll',()=>{
-	const text = document.querySelectorAll('.menu_knop')
-	if(pageYOffset > 95 ){
-		document.querySelector('#nav_animation').style.backgroundColor="#000"
-		text.forEach(ele=>{
-			ele.style.color="#fff"
-		})
-		document.querySelector("#menu").style.backgroundColor="#000"
-	}else{
-		document.querySelector('#nav_animation').style.backgroundColor="#fff"
-		text.forEach(ele=>{
-			ele.style.color="#000"
-		})
-		document.querySelector("#menu").style.backgroundColor="#fff"
-	}
-})
-
-const btn = document.querySelector('.hamburger-menu');
-btn.addEventListener('click',()=>{
-	document.querySelector('#menu').style.right="0%"
-
-})
-
-const cross = document.querySelector('.cross')
-cross.addEventListener('click',()=>{
-	document.querySelector('#menu').style.right="-100%"
-})
